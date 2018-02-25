@@ -4,7 +4,8 @@ package com.fleenmobile.androidinterviewtask.main.fragment.list
  * @author FleenMobile at 2018-02-25
  */
 class ListFragmentPresenter(
-
+        private val view: ListFragmentContract.View,
+        private val router: ListFragmentContract.Router
 ) : ListFragmentContract.Presenter {
 
     override fun visible() {

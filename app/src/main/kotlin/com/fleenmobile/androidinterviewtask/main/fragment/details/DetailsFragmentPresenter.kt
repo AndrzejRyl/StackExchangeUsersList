@@ -4,7 +4,8 @@ package com.fleenmobile.androidinterviewtask.main.fragment.details
  * @author FleenMobile at 2018-02-25
  */
 class DetailsFragmentPresenter(
-
+        private val view: DetailsFragmentContract.View,
+        private val router: DetailsFragmentContract.Router
 ) : DetailsFragmentContract.Presenter {
 
     override fun visible() {
