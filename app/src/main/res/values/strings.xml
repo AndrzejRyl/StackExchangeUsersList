@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AndroidInterviewTask</string>
+    <string name="avatar">User\'s avatar</string>
+    <string name="location">Location</string>
+    <string name="age">Age</string>
+    <string name="creation_date">Creation date</string>
+    <string name="silver_medal_badge">Silver medal badge</string>
+    <string name="bronze_medal_badge">Bronze medal badge</string>
+    <string name="golden_medal_badge">Golden medal badge</string>
 </resources>

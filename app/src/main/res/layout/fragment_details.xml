@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_horizontal_2"
+        style="@style/HorizontalGuideline"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical_5"
+        style="@style/VerticalGuideline"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/details_fragment_avatar"
+        style="@style/Wrap"
+        android:contentDescription="@string/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2"
+        app:srcCompat="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/details_fragment_username"
+        style="@style/UserDetailsHeader"
+        app:layout_constraintEnd_toEndOf="@id/details_fragment_avatar"
+        app:layout_constraintStart_toStartOf="@id/details_fragment_avatar"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_avatar"
+        tools:text="User" />
+
+    <TextView
+        android:id="@+id/details_fragment_reputation"
+        style="@style/UserDetailsReputation"
+        android:background="@drawable/reputation_background"
+        app:layout_constraintEnd_toEndOf="@id/details_fragment_avatar"
+        app:layout_constraintStart_toStartOf="@id/details_fragment_avatar"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_username"
+        tools:text="Rep: 4" />
+
+    <ImageView
+        android:id="@+id/details_fragment_silver_badges_icon"
+        style="@style/BagdeIcon"
+        android:contentDescription="@string/silver_medal_badge"
+        app:layout_constraintEnd_toStartOf="@id/details_fragment_silver_badges_count"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_gold_badges_count"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        app:srcCompat="@drawable/ic_silver_medal" />
+
+    <TextView
+        android:id="@+id/details_fragment_silver_badges_count"
+        style="@style/UserDetailsValue"
+        app:layout_constraintEnd_toStartOf="@id/details_fragment_bronze_badges_icon"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_silver_badges_icon"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        tools:text="3" />
+
+    <ImageView
+        android:id="@+id/details_fragment_bronze_badges_icon"
+        style="@style/BagdeIcon"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:contentDescription="@string/bronze_medal_badge"
+        app:layout_constraintEnd_toStartOf="@id/details_fragment_bronze_badges_count"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        app:srcCompat="@drawable/ic_bronze_medal" />
+
+    <TextView
+        android:id="@+id/details_fragment_bronze_badges_count"
+        style="@style/UserDetailsValue"
+        app:layout_constraintEnd_toEndOf="@id/details_fragment_user_creation_date"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        tools:text="3" />
+
+    <ImageView
+        android:id="@+id/details_fragment_gold_badges_icon"
+        style="@style/BagdeIcon"
+        android:contentDescription="@string/golden_medal_badge"
+        app:layout_constraintStart_toStartOf="@id/details_fragment_user_creation_date_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        app:srcCompat="@drawable/ic_gold_medal" />
+
+    <TextView
+        android:id="@+id/details_fragment_gold_badges_count"
+        style="@style/UserDetailsValue"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_gold_badges_icon"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_reputation"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_location_header"
+        style="@style/UserDetailsHeader"
+        android:text="@string/location"
+        app:layout_constraintStart_toStartOf="@id/details_fragment_user_creation_date_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_gold_badges_icon" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_location"
+        style="@style/UserDetailsValue"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_user_location_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_gold_badges_icon"
+        tools:text="Canada" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_age_header"
+        style="@style/UserDetailsHeader"
+        android:text="@string/age"
+        app:layout_constraintStart_toStartOf="@id/details_fragment_user_creation_date_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_user_location_header" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_age"
+        style="@style/UserDetailsValue"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_user_age_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_user_location_header"
+        tools:text="34" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_creation_date_header"
+        style="@style/UserDetailsHeader"
+        android:text="@string/creation_date"
+        app:layout_constraintEnd_toStartOf="@id/details_fragment_user_creation_date"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_user_age_header" />
+
+    <TextView
+        android:id="@+id/details_fragment_user_creation_date"
+        style="@style/UserDetailsValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_user_creation_date_header"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment_user_age_header"
+        tools:text="24/02/18" />
+
+</android.support.constraint.ConstraintLayout>
