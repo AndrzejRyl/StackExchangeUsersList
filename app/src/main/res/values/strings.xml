@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidInterviewTask</string>
+    <string name="search">Search</string>
+    <string name="search_info">Enter search term and press search button</string>
     <string name="avatar">User\'s avatar</string>
     <string name="location">Location</string>
     <string name="age">Age</string>
