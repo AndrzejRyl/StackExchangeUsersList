@@ -1,12 +1,16 @@
 package com.fleenmobile.androidinterviewtask.main.fragment.details
 
-import android.support.v4.app.Fragment
+import com.fleenmobile.androidinterviewtask.BaseFragment
+import com.fleenmobile.androidinterviewtask.R
 import com.fleenmobile.androidinterviewtask.data.User
 
 /**
  * @author FleenMobile at 2018-02-25
  */
-class DetailsFragment : Fragment(), DetailsFragmentContract.View, DetailsFragmentContract.Router {
+class DetailsFragment : BaseFragment<DetailsFragmentContract.Presenter>(),
+        DetailsFragmentContract.View, DetailsFragmentContract.Router {
+
+    override val layoutId: Int = R.layout.fragment_details
 
     override fun showUser(user: User) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
