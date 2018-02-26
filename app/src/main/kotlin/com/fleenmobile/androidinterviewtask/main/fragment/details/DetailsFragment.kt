@@ -1,5 +1,7 @@
 package com.fleenmobile.androidinterviewtask.main.fragment.details
 
+import android.widget.TextView
+import butterknife.BindView
 import com.fleenmobile.androidinterviewtask.BaseFragment
 import com.fleenmobile.androidinterviewtask.R
 import com.fleenmobile.androidinterviewtask.data.User
@@ -11,14 +13,14 @@ import com.fleenmobile.androidinterviewtask.showToast
 class DetailsFragment : BaseFragment<DetailsFragmentContract.Presenter>(),
         DetailsFragmentContract.View, DetailsFragmentContract.Router {
 
+    @BindView(R.id.details_fragment_username)
+    lateinit var usernameTextView: TextView
+
     override val layoutId: Int = R.layout.fragment_details
 
     override fun showUser(user: User) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun navigateBack() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        usernameTextView.text = user.name
+        //todo add rest
     }
 
     override fun showError(message: String) {

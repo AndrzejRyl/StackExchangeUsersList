@@ -1,12 +1,12 @@
 package com.fleenmobile.androidinterviewtask.utils.resourceprovider
 
-import android.app.Activity
+import android.content.Context
 import android.support.annotation.StringRes
 
 /**
  * @author FleenMobile at 2018-02-25
  */
-class ResourceProvider(private val activity: Activity) {
+class ResourceProvider(private val context: Context) {
 
-    fun getString(@StringRes id: Int) = activity.getString(id)
+    fun getString(@StringRes id: Int) = context.getString(id)
 }

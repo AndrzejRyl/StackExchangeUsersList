@@ -30,8 +30,4 @@ class DetailsFragmentPresenter(
     override fun clear() {
         compositeDisposable.clear()
     }
-
-    override fun onBackPressed() {
-        router.navigateBack()
-    }
 }
