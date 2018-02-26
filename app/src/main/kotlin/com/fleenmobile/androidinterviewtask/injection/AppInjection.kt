@@ -5,11 +5,13 @@ import android.content.Context
 import com.fleenmobile.androidinterviewtask.BaseApp
 import com.fleenmobile.androidinterviewtask.injection.binding.ActivityBinderModule
 import com.fleenmobile.androidinterviewtask.injection.binding.FragmentBinderModule
+import com.fleenmobile.androidinterviewtask.injection.modules.RepositoryModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
+import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Scope
 import javax.inject.Singleton
 
@@ -23,6 +25,10 @@ class AppModule {
     @Provides
     fun context(application: Application): Context =
             application
+
+    @Provides
+    fun compositeDisposable(): CompositeDisposable =
+            CompositeDisposable()
 }
 
 @Singleton
@@ -30,6 +36,7 @@ class AppModule {
     AndroidInjectionModule::class,
     ActivityBinderModule::class,
     FragmentBinderModule::class,
+    RepositoryModule::class,
     AppModule::class])
 interface AppComponent {
 
