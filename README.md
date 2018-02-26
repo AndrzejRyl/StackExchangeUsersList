@@ -1,7 +1,7 @@
-# AndroidInterviewTasks
+# StackExchange Users list
 
-This is a repository containing tasks I've completed on behalf of recruiters.
+Task description is available in the file task_desc.md
 
-## Branches 
-Master branch contains initial Kotlin project as a base for every task.
-Each task has it's own branch.
+## Prerequisites
+You have to provide STACKEXCHANGE_BASE_URL variable in your main gradle.properties file.
+Currently working value (as for 27/02/2018) is "https://api.stackexchange.com/2.2/"
