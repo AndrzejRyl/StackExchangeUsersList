@@ -5,6 +5,7 @@ import android.content.Context
 import com.fleenmobile.androidinterviewtask.BaseApp
 import com.fleenmobile.androidinterviewtask.injection.binding.ActivityBinderModule
 import com.fleenmobile.androidinterviewtask.injection.binding.FragmentBinderModule
+import com.fleenmobile.androidinterviewtask.injection.modules.NetworkModule
 import com.fleenmobile.androidinterviewtask.injection.modules.RepositoryModule
 import com.fleenmobile.androidinterviewtask.injection.modules.ResourceProviderModule
 import com.fleenmobile.androidinterviewtask.injection.modules.UserSelectedCommunicationModule
@@ -41,6 +42,7 @@ class AppModule {
     RepositoryModule::class,
     ResourceProviderModule::class,
     UserSelectedCommunicationModule::class,
+    NetworkModule::class,
     AppModule::class])
 interface AppComponent {
 

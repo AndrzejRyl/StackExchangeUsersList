@@ -22,6 +22,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "mode"
+    productFlavors {
+        presentation {
+            dimension "mode"
+            buildConfigField 'String', 'BASE_URL', STACKEXCHANGE_BASE_URL
+        }
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         release.java.srcDirs += 'src/release/kotlin'
@@ -67,6 +75,12 @@ dependencies {
     //JodaTime
     implementation "net.danlew:android.joda:2.9.9.1"
     testImplementation "joda-time:joda-time:2.9.9"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    debugImplementation "com.squareup.okhttp3:logging-interceptor:3.9.1"
 }
 repositories {
     mavenCentral()
