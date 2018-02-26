@@ -2,6 +2,7 @@ package com.fleenmobile.androidinterviewtask.injection.modules
 
 import android.content.Context
 import com.fleenmobile.androidinterviewtask.utils.resourceprovider.ResourceProvider
+import com.fleenmobile.androidinterviewtask.utils.resourceprovider.ResourceProviderImpl
 import dagger.Module
 import dagger.Provides
 
@@ -12,5 +13,5 @@ import dagger.Provides
 class ResourceProviderModule {
 
     @Provides
-    fun resourceProvider(context: Context) = ResourceProvider(context)
+    fun resourceProvider(context: Context): ResourceProvider = ResourceProviderImpl(context)
 }
