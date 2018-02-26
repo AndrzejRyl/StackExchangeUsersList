@@ -10,13 +10,10 @@ interface DetailsFragmentContract {
 
     interface View {
         fun showUser(user: User)
+        fun showError(message: String)
     }
 
-    interface Router {
-        fun navigateBack()
-    }
+    interface Router
 
-    interface Presenter : BaseContract.Presenter {
-        fun onBackPressed()
-    }
+    interface Presenter : BaseContract.Presenter
 }

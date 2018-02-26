@@ -1,0 +1,12 @@
+package com.fleenmobile.androidinterviewtask.utils.repository
+
+import com.fleenmobile.androidinterviewtask.data.User
+import io.reactivex.Observable
+
+/**
+ * @author FleenMobile at 2018-02-25
+ */
+interface Repository {
+
+    fun getUsers(searchTerm: String): Observable<List<User>>
+}
