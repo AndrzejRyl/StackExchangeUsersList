@@ -10,6 +10,7 @@ import com.fleenmobile.androidinterviewtask.showToast
 import com.fleenmobile.androidinterviewtask.utils.resourceprovider.ResourceProvider
 import com.squareup.picasso.Picasso
 import org.joda.time.format.DateTimeFormat
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 /**
@@ -67,8 +68,8 @@ class DetailsFragment : BaseFragment<DetailsFragmentContract.Presenter>(),
         silverBadgesTextView.text = "${badgeCounts.silver}"
         bronzeBadgesTextView.text = "${badgeCounts.bronze}"
         locationTextView.text = location
-        ageTextView.text = "$age"
-        creationDateTextView.text = DATE_FORMAT.print(creationDate)
+        ageTextView.text = if (age > 0) "$age" else ""
+        creationDateTextView.text = DATE_FORMAT.print(TimeUnit.SECONDS.toMillis(creationDate))
     }
 
     override fun showError(message: String) {

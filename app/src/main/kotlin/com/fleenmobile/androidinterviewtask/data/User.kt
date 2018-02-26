@@ -1,5 +1,7 @@
 package com.fleenmobile.androidinterviewtask.data
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * @author FleenMobile at 2018-02-25
  */
@@ -7,12 +9,12 @@ package com.fleenmobile.androidinterviewtask.data
 data class BadgeData(val bronze: Int = 0, val silver: Int = 0, val gold: Int = 0)
 
 data class User(
-        val badgeCounts: BadgeData = BadgeData(),
+        @SerializedName("badge_counts") val badgeCounts: BadgeData = BadgeData(),
         val age: Int,
         val reputation: Int,
-        val creationDate: Long,
-        val userId: Long,
+        @SerializedName("creation_date") val creationDate: Long,
+        @SerializedName("user_id") val userId: Long,
         val location: String,
-        val profileImageUrl: String,
-        val name: String
+        @SerializedName("profile_image") val profileImageUrl: String,
+        @SerializedName("display_name") val name: String
 )
