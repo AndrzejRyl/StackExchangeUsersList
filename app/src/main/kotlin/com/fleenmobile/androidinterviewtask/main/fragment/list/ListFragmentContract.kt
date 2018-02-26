@@ -18,7 +18,7 @@ interface ListFragmentContract {
     }
 
     interface Presenter : BaseContract.Presenter {
-        fun userChosen(userId: Int)
-        fun searchTermEntered(search: String)
+        fun userChosen(userId: Long)
+        fun searchButtonClicked(searchTerm: String)
     }
 }

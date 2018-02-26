@@ -10,6 +10,7 @@ interface DetailsFragmentContract {
 
     interface View {
         fun showUser(user: User)
+        fun showError(message: String)
     }
 
     interface Router {

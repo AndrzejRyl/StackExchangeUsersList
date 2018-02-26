@@ -3,6 +3,7 @@ package com.fleenmobile.androidinterviewtask.main.fragment.details
 import com.fleenmobile.androidinterviewtask.BaseFragment
 import com.fleenmobile.androidinterviewtask.R
 import com.fleenmobile.androidinterviewtask.data.User
+import com.fleenmobile.androidinterviewtask.showToast
 
 /**
  * @author FleenMobile at 2018-02-25
@@ -20,4 +21,7 @@ class DetailsFragment : BaseFragment<DetailsFragmentContract.Presenter>(),
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    override fun showError(message: String) {
+        activity.showToast(message)
+    }
 }

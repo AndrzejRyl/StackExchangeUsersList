@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.ListFragment
 import com.fleenmobile.androidinterviewtask.injection.modules.DetailsFragmentModule
 import com.fleenmobile.androidinterviewtask.injection.modules.ListFragmentModule
+import com.fleenmobile.androidinterviewtask.injection.modules.UserSelectedCommunicationModule
 import com.fleenmobile.androidinterviewtask.main.fragment.details.DetailsFragment
 import dagger.Binds
 import dagger.Module
@@ -15,10 +16,10 @@ abstract class FragmentBinderModule {
     @Binds
     abstract fun fragment(fragment: Fragment): Fragment
 
-    @ContributesAndroidInjector(modules = [ListFragmentModule::class])
+    @ContributesAndroidInjector(modules = [ListFragmentModule::class, UserSelectedCommunicationModule::class])
     abstract fun bindListFragment(): ListFragment
 
-    @ContributesAndroidInjector(modules = [DetailsFragmentModule::class])
+    @ContributesAndroidInjector(modules = [DetailsFragmentModule::class, UserSelectedCommunicationModule::class])
     abstract fun bindDetailsFragment(): DetailsFragment
 
 }

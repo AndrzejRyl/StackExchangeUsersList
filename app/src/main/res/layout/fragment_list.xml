@@ -8,7 +8,7 @@
         android:id="@+id/list_fragment_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginStart="@dimen/margin_default"
         android:hint="@string/search"
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="@id/list_fragment_search_button"
@@ -18,7 +18,7 @@
     <ImageView
         android:id="@+id/list_fragment_search_button"
         style="@style/Wrap"
-        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/margin_default"
         android:contentDescription="@string/search"
         app:layout_constraintBottom_toBottomOf="@id/list_fragment_search"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_fragment_users_list"
         style="@style/Empty"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
