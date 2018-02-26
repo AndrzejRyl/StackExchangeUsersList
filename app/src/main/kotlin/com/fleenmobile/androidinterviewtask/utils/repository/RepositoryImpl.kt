@@ -13,7 +13,7 @@ class RepositoryImpl : Repository {
     override fun getUsers(searchTerm: String): Observable<List<User>> {
         val users = arrayListOf<User>(
                 User(
-                        BadgeData(0,1,2),
+                        BadgeData(10),
                         32,
                         124,
                         Date().time,

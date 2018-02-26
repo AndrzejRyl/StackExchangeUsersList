@@ -8,5 +8,7 @@ import android.support.annotation.StringRes
  */
 class ResourceProvider(private val context: Context) {
 
-    fun getString(@StringRes id: Int) = context.getString(id)
+    fun getString(@StringRes id: Int): String = context.getString(id)
+
+    fun getString(@StringRes id: Int, param: String) = context.getString(id, param)
 }

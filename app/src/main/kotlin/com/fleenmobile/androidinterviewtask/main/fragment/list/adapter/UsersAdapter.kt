@@ -28,7 +28,7 @@ class UsersAdapter(
         holder.apply {
             setData(
                     user.name,
-                    "${resourceProvider.getString(R.string.reputation)} ${user.reputation}"
+                    resourceProvider.getString(R.string.reputation, "${user.reputation}")
             )
             onClickListener = { onUserChosenListener?.invoke(user.userId) }
         }

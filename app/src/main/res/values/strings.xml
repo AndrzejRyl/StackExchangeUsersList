@@ -10,5 +10,5 @@
     <string name="bronze_medal_badge">Bronze medal badge</string>
     <string name="golden_medal_badge">Golden medal badge</string>
     <string name="no_user">This user is unavailable</string>
-    <string name="reputation">Rep:</string>
+    <string name="reputation">Rep: %s</string>
 </resources>

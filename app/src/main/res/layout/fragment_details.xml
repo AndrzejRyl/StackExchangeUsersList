@@ -17,10 +17,13 @@
 
     <ImageView
         android:id="@+id/details_fragment_avatar"
-        style="@style/Wrap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/avatar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toStartOf="@id/details_fragment_bronze_badges_icon"
+        app:layout_constraintStart_toEndOf="@id/details_fragment_gold_badges_count"
         app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2"
         app:srcCompat="@drawable/ic_user" />
 
